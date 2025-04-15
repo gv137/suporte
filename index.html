@@ -3,38 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suporte Técnico - Solicitação</title>
+    <title>Sistema de Suporte - Professores</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Biblioteca para exportar Excel (SheetJS) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>🛠 Solicitar Suporte</h1>
+        <h1>🎯 Solicitar Suporte Técnico</h1>
         <form id="form-chamado">
             <div class="input-group">
-                <label for="nome">Seu nome:</label>
-                <input type="text" id="nome" required>
+                <label for="nome">Seu Nome:</label>
+                <input type="text" id="nome" required placeholder="Ex: Professor Silva">
             </div>
             <div class="input-group">
-                <label for="local">Local (sala/lab):</label>
-                <input type="text" id="local" required>
+                <label for="local">Local:</label>
+                <input type="text" id="local" required placeholder="Ex: Laboratório 3">
             </div>
             <div class="input-group">
-                <label for="problema">Descreva o problema:</label>
-                <textarea id="problema" rows="4" required></textarea>
+                <label for="problema">Problema:</label>
+                <textarea id="problema" rows="4" required placeholder="Descreva detalhadamente"></textarea>
             </div>
             <button type="submit">Enviar Chamado</button>
         </form>
-
-        <!-- Botão para exportar para Excel (visível apenas para a equipe) -->
-        <button id="exportar-excel" class="admin-button">Exportar para Excel</button>
-
-        <!-- Área administrativa (opcional) -->
-        <div id="admin-view" style="display: none;">
-            <h2>Chamados Abertos</h2>
-            <ul id="lista-chamados"></ul>
-        </div>
+        <div id="mensagem" class="mensagem"></div>
     </div>
     <script src="script.js"></script>
 </body>
