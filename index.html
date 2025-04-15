@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte Técnico - Solicitação</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Biblioteca para exportar Excel (SheetJS) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>🛠 Solicitar Suporte</h1>
+        <form id="form-chamado">
+            <div class="input-group">
+                <label for="nome">Seu nome:</label>
+                <input type="text" id="nome" required>
+            </div>
+            <div class="input-group">
+                <label for="local">Local (sala/lab):</label>
+                <input type="text" id="local" required>
+            </div>
+            <div class="input-group">
+                <label for="problema">Descreva o problema:</label>
+                <textarea id="problema" rows="4" required></textarea>
+            </div>
+            <button type="submit">Enviar Chamado</button>
+        </form>
+
+        <!-- Botão para exportar para Excel (visível apenas para a equipe) -->
+        <button id="exportar-excel" class="admin-button">Exportar para Excel</button>
+
+        <!-- Área administrativa (opcional) -->
+        <div id="admin-view" style="display: none;">
+            <h2>Chamados Abertos</h2>
+            <ul id="lista-chamados"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
