@@ -1,4 +1,4 @@
-const API_URL = "https://script.google.com/macros/s/AKfycbzlGf2qhML4k774TR-aZ120_qpn5n3UQgRNNQKt98uVo-fFp7J_jtsNKbmSlxTqCoLWmw/exec"; // Substitua pela URL do seu Apps Script!
+const API_URL = "https://script.google.com/macros/s/AKfycbxTvtoOHNRL8kr2vtqG_XPyb0CbkGBXTSrpbmlWT45eZp1ql3wvYGV8rvkyewKfkKd92w/exec"; // Substitua pela URL do seu Apps Script!
 
 document.getElementById('form-chamado').addEventListener('submit', async (e) => {
     e.preventDefault();
